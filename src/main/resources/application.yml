@@ -3,6 +3,10 @@ spring:
     name: banana-config
   profiles:
     active: native
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:10011
   cloud:
     config:
       server:
