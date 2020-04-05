@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: banana-config
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: /home/config/
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:2020/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+server:
+  port: 10010
